@@ -46,7 +46,7 @@ export default function Benefits() {
   ];
 
   const getExerciseIcon = (type: string) => {
-    const icons: { [key: string]: JSX.Element } = {
+    const icons: Record<string, React.ReactElement> = {
       walking: <PersonStanding className="w-5 h-5" />,
       running: <Activity className="w-5 h-5" />,
       cycling: <Bike className="w-5 h-5" />,
