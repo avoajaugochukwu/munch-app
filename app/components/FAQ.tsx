@@ -102,7 +102,7 @@ export default function FAQ() {
             Still have questions?
           </p>
           <a
-            href="mailto:support@munchapp.com"
+            href="mailto:munch@steadywinstech.com"
             className="inline-flex items-center gap-2 text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 font-medium"
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
