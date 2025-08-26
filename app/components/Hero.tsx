@@ -1,94 +1,117 @@
 import Image from "next/image";
+import { Star, Users, ArrowRight, Sparkles } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section id="hero" className="pt-24 pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 via-white to-violet-50 dark:from-gray-900 dark:via-gray-900 dark:to-purple-900/20">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight">
-                Food in <span className="bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent">Perspective</span>,
-                <br />
-                Fitness in <span className="bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent">Balance</span>
+    <section id="hero" className="relative min-h-screen flex items-center pt-20 pb-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-100 via-pink-50 to-white dark:from-gray-900 dark:via-purple-900/20 dark:to-gray-900" />
+      <div className="absolute inset-0 bg-grid-pattern opacity-5" />
+      
+      <div className="absolute top-20 left-10 w-72 h-72 bg-purple-400 rounded-full blur-3xl opacity-20 animate-pulse" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-pink-400 rounded-full blur-3xl opacity-20 animate-pulse" />
+      
+      <div className="max-w-7xl mx-auto relative">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="space-y-10">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 dark:bg-purple-900/30 rounded-full">
+              <Sparkles className="w-4 h-4 text-purple-600 dark:text-purple-400" />
+              <span className="text-sm font-medium text-purple-700 dark:text-purple-300">Revolutionary Food Tracking</span>
+            </div>
+            
+            <div className="space-y-6">
+              <h1 className="text-6xl lg:text-7xl font-bold leading-tight">
+                <span className="text-gray-900 dark:text-white">Food in</span>
+                <span className="block bg-gradient-to-r from-purple-600 via-pink-600 to-purple-600 bg-clip-text text-transparent animate-gradient">
+                  Perspective
+                </span>
+                <span className="text-gray-900 dark:text-white">Fitness in</span>
+                <span className="block bg-gradient-to-r from-pink-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-gradient">
+                  Balance
+                </span>
               </h1>
-              <p className="text-xl text-gray-600 dark:text-gray-300">
+              <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-lg">
                 See your food in minutes, not numbers. Instantly translate any meal into relatable exercise durations with just a photo.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-5">
               <a
                 href="#download"
-                className="inline-flex items-center justify-center px-8 py-4 bg-black text-white rounded-full hover:bg-gray-800 transition-colors group"
+                className="group relative inline-flex items-center justify-center px-8 py-5 overflow-hidden rounded-2xl bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
               >
-                <svg className="w-6 h-6 mr-3" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
-                </svg>
-                <div className="text-left">
-                  <div className="text-xs">Download on the</div>
-                  <div className="text-sm font-semibold">App Store</div>
-                </div>
+                <span className="relative flex items-center gap-2">
+                  Get Started Free
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </span>
               </a>
               
               <a
-                href="#download"
-                className="inline-flex items-center justify-center px-8 py-4 bg-black text-white rounded-full hover:bg-gray-800 transition-colors group"
+                href="#how-it-works"
+                className="inline-flex items-center justify-center px-8 py-5 rounded-2xl border-2 border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 font-semibold hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300"
               >
-                <svg className="w-6 h-6 mr-3" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M3 20.5v-17c0-.83.67-1.5 1.5-1.5h11c.83 0 1.5.67 1.5 1.5v17c0 .83-.67 1.5-1.5 1.5h-11c-.83 0-1.5-.67-1.5-1.5zm10.94-12.8l-5.3 5.3 1.41 1.41 5.3-5.3c.78-.78.78-2.05 0-2.83l-5.3-5.3-1.41 1.41 5.3 5.31z"/>
-                </svg>
-                <div className="text-left">
-                  <div className="text-xs">Get it on</div>
-                  <div className="text-sm font-semibold">Google Play</div>
-                </div>
+                See How It Works
               </a>
             </div>
 
             <div className="flex items-center gap-8">
-              <div className="flex -space-x-2">
+              <div className="flex -space-x-3">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <div
                     key={i}
-                    className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-400 to-violet-400 border-2 border-white dark:border-gray-900"
+                    className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-400 to-pink-400 border-3 border-white dark:border-gray-900 shadow-lg"
                   />
                 ))}
               </div>
               <div>
-                <div className="flex text-yellow-400">
-                  {"★★★★★".split("").map((star, i) => (
-                    <span key={i}>{star}</span>
+                <div className="flex gap-1 mb-1">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-                <p className="text-sm text-gray-600 dark:text-gray-400">
+                <p className="text-sm text-gray-600 dark:text-gray-400 font-medium">
                   50,000+ happy users
                 </p>
               </div>
             </div>
           </div>
 
-          <div className="relative">
-            <div className="relative z-10">
-              <Image
-                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&h=1200&fit=crop"
-                alt="Healthy food bowl"
-                width={400}
-                height={600}
-                className="rounded-3xl shadow-2xl mx-auto"
-                priority
-              />
-              <div className="absolute top-4 right-4 bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-lg">
-                <p className="text-sm font-semibold text-gray-900 dark:text-white">Buddha Bowl</p>
-                <p className="text-2xl font-bold text-purple-600">45 min</p>
-                <p className="text-xs text-gray-600 dark:text-gray-400">cycling</p>
-              </div>
-              <div className="absolute bottom-4 left-4 bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-lg">
-                <p className="text-sm font-semibold text-gray-900 dark:text-white">Or just</p>
-                <p className="text-2xl font-bold text-green-600">60 min</p>
-                <p className="text-xs text-gray-600 dark:text-gray-400">walking</p>
+          <div className="relative lg:pl-8">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 rounded-[3rem] blur-3xl opacity-30 animate-pulse" />
+              
+              <div className="relative bg-white dark:bg-gray-800 rounded-[3rem] p-8 shadow-2xl">
+                <Image
+                  src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=800&h=1200&fit=crop"
+                  alt="Healthy food bowl"
+                  width={400}
+                  height={600}
+                  className="rounded-[2rem] shadow-xl mx-auto"
+                  priority
+                />
+                
+                <div className="absolute top-12 -right-8 bg-white dark:bg-gray-800 rounded-3xl p-5 shadow-2xl backdrop-blur-lg bg-opacity-95 border border-gray-100 dark:border-gray-700">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="p-2 bg-purple-100 dark:bg-purple-900/30 rounded-xl">
+                      <Sparkles className="w-5 h-5 text-purple-600 dark:text-purple-400" />
+                    </div>
+                    <p className="text-sm font-semibold text-gray-900 dark:text-white">Buddha Bowl</p>
+                  </div>
+                  <p className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">45 min</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">cycling to burn</p>
+                </div>
+                
+                <div className="absolute bottom-12 -left-8 bg-white dark:bg-gray-800 rounded-3xl p-5 shadow-2xl backdrop-blur-lg bg-opacity-95 border border-gray-100 dark:border-gray-700">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="p-2 bg-green-100 dark:bg-green-900/30 rounded-xl">
+                      <Users className="w-5 h-5 text-green-600 dark:text-green-400" />
+                    </div>
+                    <p className="text-sm font-semibold text-gray-900 dark:text-white">Or just</p>
+                  </div>
+                  <p className="text-3xl font-bold text-green-600">60 min</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">of walking</p>
+                </div>
               </div>
             </div>
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-violet-400 rounded-3xl blur-3xl opacity-20" />
           </div>
         </div>
       </div>

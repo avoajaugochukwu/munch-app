@@ -12,7 +12,7 @@ export default function FAQ() {
     },
     {
       question: "Does the app work offline?",
-      answer: "Yes! Once downloaded, Munch works completely offline. All processing happens on your device, ensuring both privacy and instant results without needing an internet connection."
+      answer: "Munch requires an internet connection for the initial food recognition using our AI models. However, once foods are recognized, all tracking and calculations happen locally on your device for privacy and speed."
     },
     {
       question: "What exercises can I choose from?",
